@@ -1,3 +1,5 @@
+![alt tag](https://github.com/doenikoe/az-idatepicker/raw/master/screenshoot.png)
+
 # az-idatepicker
 Datepicker component for angular 2
 
