@@ -1,0 +1,101 @@
+<div class="idatepicker-dialog-date-days">
+    <span *ngFor="let symbol of dateSymbol">{{symbol}}</span>
+</div>
+<div class="idatepicker-dialog-date-dates">
+    <div>
+        <div>
+            <div *ngFor="let w of weeks">
+                <span *ngIf="dates[w][0][0] === null"></span>
+                <button
+                        (click)="selectDate(dates[w][0][0].meta)"
+                        *ngIf="dates[w][0][0] !== null"
+                        tabindex="0"
+                        type="button"
+                        idate
+                        [class.selected-day]="getIsSelected(dates[w][0][0].meta)"
+                >
+                    <div></div>
+                    <span>{{dates[w][0][0].date}}</span>
+                </button>
+
+                <span *ngIf="dates[w][1][0] === null"></span>
+                <button
+                        (click)="selectDate(dates[w][1][0].meta)"
+                        *ngIf="dates[w][1][0] !== null"
+                        tabindex="0"
+                        type="button"
+                        idate
+                        [class.selected-day]="getIsSelected(dates[w][1][0].meta)"
+                >
+                    <div></div>
+                    <span>{{dates[w][1][0].date}}</span>
+                </button>
+
+                <span *ngIf="dates[w][2][0] === null"></span>
+                <button
+                        (click)="selectDate(dates[w][2][0].meta)"
+                        *ngIf="dates[w][2][0] !== null"
+                        tabindex="0"
+                        type="button"
+                        idate
+                        [class.selected-day]="getIsSelected(dates[w][2][0].meta)"
+                >
+                    <div></div>
+                    <span>{{dates[w][2][0].date}}</span>
+                </button>
+
+                <span *ngIf="dates[w][3][0] === null"></span>
+                <button
+                        (click)="selectDate(dates[w][3][0].meta)"
+                        *ngIf="dates[w][3][0] !== null"
+                        tabindex="0"
+                        type="button"
+                        idate
+                        [class.selected-day]="getIsSelected(dates[w][3][0].meta)"
+                >
+                    <div></div>
+                    <span>{{dates[w][3][0].date}}</span>
+                </button>
+
+                <span *ngIf="dates[w][4][0] === null"></span>
+                <button
+                        (click)="selectDate(dates[w][4][0].meta)"
+                        *ngIf="dates[w][4][0] !== null"
+                        tabindex="0"
+                        type="button"
+                        idate
+                        [class.selected-day]="getIsSelected(dates[w][4][0].meta)"
+                >
+                    <div></div>
+                    <span>{{dates[w][4][0].date}}</span>
+                </button>
+
+                <span *ngIf="dates[w][5][0] === null"></span>
+                <button
+                        (click)="selectDate(dates[w][5][0].meta)"
+                        *ngIf="dates[w][5][0] !== null"
+                        tabindex="0"
+                        type="button"
+                        idate
+                        [class.selected-day]="getIsSelected(dates[w][5][0].meta)"
+                >
+                    <div></div>
+                    <span>{{dates[w][5][0].date}}</span>
+                </button>
+
+                <span *ngIf="dates[w][6][0] === null"></span>
+                <button
+                        (click)="selectDate(dates[w][6][0].meta)"
+                        *ngIf="dates[w][6][0] !== null"
+                        tabindex="0"
+                        type="button"
+                        idate
+                        [class.selected-day]="getIsSelected(dates[w][6][0].meta)"
+                >
+                    <div></div>
+                    <span>{{dates[w][6][0].date}}</span>
+                </button>
+            </div>
+        </div>
+    </div>
+</div>

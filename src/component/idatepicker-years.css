@@ -1,0 +1,97 @@
+.idatepicker-dialog-years{
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    height: 272px;
+    margin-top: 10px;
+    overflow: hidden;
+    width: 100%;
+}
+
+.idatepicker-dialog-years > div{
+    background-color: rgb(255, 255, 255);
+    height: inherit;
+    overflow-x: hidden;
+    overflow-y: scroll;
+    position: relative;
+}
+
+.idatepicker-dialog-years > div > div{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    min-height: 100%;
+}
+
+.idatepicker-dialog-years > div > div > div > div:first-child{
+    background-color: rgb(238,238,238);
+    border: 1px solid rgb(255,255,255);
+    cursor: pointer;
+}
+
+.idatepicker-dialog-years > div > div > div > div:first-child > button{
+    border: 10px;
+    box-sizing: border-box;
+    display: block;
+    font-family: Roboto, sans-serif;
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+    text-decoration: none;
+    margin: 0px auto;
+    padding: 0px;
+    outline: none;
+    font-size: 14px;
+    font-weight: inherit;
+    position: relative;
+    text-align: center;
+    line-height: inherit;
+    cursor: pointer;
+}
+
+.idatepicker-dialog-years > div > div > div > div:first-child > button{
+    background-color: transparent;
+}
+
+.idatepicker-dialog-years > div > div > div > div:first-child > button > span {
+    align-self: center; font-size: 16px; font-weight: 400; position: relative;
+}
+
+.idatepicker-dialog-years > div > div > div > div:last-child{
+    padding: 0;
+    margin: 0;
+    display: -webkit-box;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-flex-flow: row wrap;
+    justify-content: space-around;
+    max-height:0;
+    overflow: hidden;
+    opacity: 0;
+    transition: 0.3s ease-in-out;
+}
+
+.idatepicker-dialog-years > div > div > div > div:last-child.show{
+    opacity: 1;
+    max-height: 75px;
+}
+
+.idatepicker-dialog-years > div > div > div > div:last-child > div {
+    padding: 5px;
+    width: 50px;
+    height: 15px;
+    font-size: 14px;
+    text-align: center;
+}
+
+.idatepicker-dialog-years > div > div > div > div:last-child div{
+    cursor: pointer;
+}
+
+.idatepicker-dialog-years > div > div > div > div:last-child > div > div:hover{
+    background-color: rgb(7, 151, 225);
+    /*border-radius: 50%;*/
+    transform: scale(1);
+    color: rgb(255,255,255);
+    transition: all 450ms cubic-bezier(0.23, 1, 0.32, 1) 0ms;
+}

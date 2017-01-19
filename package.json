@@ -1,0 +1,54 @@
+{
+  "name": "az-idatepicker",
+  "version": "0.0.0",
+  "description": "Datepicker component for angular 2",
+  "main": "dist/idatepicker.bundle.umd.js",
+  "scripts": {
+    "build": "rimraf dist && webpack --config webpack.config.js --progress --profile --bail",
+    "dev": "rimraf dist_dev && webpack --config config/webpack.prod.js --progress --profile --bail"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/doenikoe/az-idatepicker.git"
+  },
+  "keywords": [
+    "angular",
+    "angular2",
+    "datepicker"
+  ],
+  "author": "Afrimadoni Dinata <doenikoe@yahoo.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/doenikoe/az-idatepicker/issues"
+  },
+  "homepage": "https://github.com/doenikoe/az-idatepicker#readme",
+  "dependencies": {
+    "@angular/common": "^2.3.1",
+    "@angular/compiler": "^2.3.1",
+    "@angular/core": "^2.3.1",
+    "@angular/forms": "^2.4.4",
+    "@angular/platform-browser": "^2.3.1",
+    "@angular/platform-browser-dynamic": "^2.3.1",
+    "core-js": "^2.4.1",
+    "rxjs": "^5.0.1",
+    "zone.js": "^0.7.2"
+  },
+  "devDependencies": {
+    "@types/node": "^6.0.52",
+    "angular2-template-loader": "^0.6.0",
+    "awesome-typescript-loader": "^3.0.0-beta.17",
+    "css-loader": "^0.26.1",
+    "extract-text-webpack-plugin": "^1.0.1",
+    "file-loader": "^0.9.0",
+    "html-loader": "^0.4.4",
+    "html-webpack-plugin": "^2.24.1",
+    "moment": "^2.17.1",
+    "null-loader": "^0.1.1",
+    "raw-loader": "^0.5.1",
+    "rimraf": "^2.5.4",
+    "style-loader": "^0.13.1",
+    "typescript": "^2.1.4",
+    "webpack": "^1.14.0",
+    "webpack-merge": "^1.1.1"
+  }
+}

@@ -1,0 +1,349 @@
+.idatepicker-wrapper{
+    font-size: 16px;
+    line-height: 24px;
+    width: 256px;
+    height: 48px;
+    display: inline-block;
+    position: relative;
+    background-color: transparent;
+    font-family: Roboto, sans-serif;
+    transition: height 200ms cubic-bezier(0.23, 1, 0.32, 1) 0ms;
+    cursor: auto;
+}
+
+.idatepicker-wrapper .inner-wrapper{
+    position: absolute;
+    opacity: 1;
+    /*width: 100%;*/
+    margin-left: 90%;
+    z-index: 1;
+    color: rgba(0, 0, 0, 0.298039);
+    transition: all 450ms cubic-bezier(0.23, 1, 0.32, 1) 0ms;
+    bottom: 12px;
+}
+
+.idatepicker-wrapper .inner-wrapper.required{
+    text-align: right;
+    color: rgb(255,0,0);
+}
+
+.idatepicker-wrapper .inner-wrapper.required > span{
+    margin-left: 25px;
+}
+
+.idatepicker-wrapper .input{
+    padding: 0px;
+    position: relative;
+    width: 100%;
+    border: none;
+    outline: none;
+    background-color: rgba(0, 0, 0, 0);
+    color: rgba(0, 0, 0, 0.870588);
+    cursor: inherit;
+    font-style: inherit;
+    font-variant: inherit;
+    font-weight: inherit;
+    font-stretch: inherit;
+    font-size: inherit;
+    line-height: inherit;
+    font-family: inherit;
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+    height: 100%;
+    -webkit-appearance: textfield;
+}
+
+.idatepicker-wrapper div:last-child hr:first-child{
+    border-top: none rgb(224, 224, 224);
+    border-left: none rgb(224, 224, 224);
+    border-right: none rgb(224, 224, 224);
+    border-bottom: 1px solid rgb(224, 224, 224);
+    bottom: 8px;
+    box-sizing: content-box;
+    margin: 0px;
+    position: absolute;
+    width: 100%;
+}
+
+.idatepicker-wrapper div:last-child hr:last-child{
+    border-top: none rgb(0, 188, 212);
+    border-left: none rgb(0, 188, 212);
+    border-right: none rgb(0, 188, 212);
+    border-bottom: 2px solid rgb(0, 188, 212);
+    bottom: 8px;
+    box-sizing: content-box;
+    margin: 0px;
+    position: absolute;
+    width: 100%;
+    transform: scaleX(0);
+    transition: all 450ms cubic-bezier(0.23, 1, 0.32, 1) 0ms;
+}
+
+.idatepicker-dialog-wrapper{
+    position: absolute;
+    bottom: 0px;
+    z-index: 2000;
+    opacity: 0;
+}
+
+.idatepicker-dialog-wrapper.active{
+    opacity: 1;
+    -webkit-transition: all 450ms ease-in-out;
+    -moz-transition: all 450ms ease-in-out;
+    -o-transition: all 450ms ease-in-out;
+    transition: all 450ms ease-in-out;
+}
+
+.idatepicker-dialog-wrapper-inner{
+    color: rgba(0, 0, 0, 0.870588);
+    background-color: rgb(255, 255, 255);
+    transition: transform 450ms cubic-bezier(0.23, 1, 0.32, 1) 0ms, opacity 450ms cubic-bezier(0.23, 1, 0.32, 1) 0ms;
+    box-sizing: border-box;
+    font-family: Roboto, sans-serif;
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+    box-shadow: rgba(0, 0, 0, 0.117647) 0px 1px 6px, rgba(0, 0, 0, 0.117647) 0px 1px 4px;
+    border-radius: 2px;
+    position: fixed;
+    z-index: 2100;
+    opacity: 1;
+    transform: scaleY(1);
+    transform-origin: left top 0px;
+    max-height: 279px;
+    padding: 0px;
+    min-height: 330px;
+    min-width: 479px;
+}
+
+.idatepicker-dialog-wrapper-container{
+    color: rgba(0, 0, 0, 0.870588);
+    width: 479px;
+    user-select: none;
+}
+
+.idatepicker-dialog-wrapper-container-left{
+    width: 165px;
+    height: 330px;
+    float: left;
+    font-weight: 700;
+    display: inline-block;
+    background-color: rgb(7,105,173);
+    border-top-left-radius: 2px;
+    border-top-right-radius: 0px;
+    border-bottom-left-radius: 2px;
+    color: rgb(255, 255, 255);
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+.idatepicker-dialog-wrapper-container-left > div:first-child {
+    position: relative;
+    overflow: hidden;
+    height: 16px;
+    margin: 0px 0px 10px;
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 16px;
+    opacity: 0.7;
+    transition: all 450ms cubic-bezier(0.23, 1, 0.32, 1) 0ms;
+}
+
+.idatepicker-dialog-wrapper-container-left > div:first-child > div{
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    top: 0px;
+    left: 0px;
+    transition: transform 450ms cubic-bezier(0.23, 1, 0.32, 1) 0ms, opacity 450ms cubic-bezier(0.23, 1, 0.32, 1) 0ms;
+}
+
+.idatepicker-dialog-wrapper-container-left > div:last-child{
+    position: relative;
+    overflow: hidden;
+    height: 100%;
+    display: block;
+    font-size: 36px;
+    line-height: 36px;
+    opacity: 1;
+    transition: all 450ms cubic-bezier(0.23, 1, 0.32, 1) 0ms;
+    width: 100%;
+    font-weight: 500;
+}
+
+.idatepicker-dialog-wrapper-container-left > div:last-child > div{
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    top: 0px;
+    left: 0px;
+    transition: transform 450ms cubic-bezier(0.23, 1, 0.32, 1) 0ms, opacity 450ms cubic-bezier(0.23, 1, 0.32, 1) 0ms;
+}
+
+.idatepicker-dialog-wrapper-container-right{
+    display: flex;
+    flex-direction: column;
+}
+
+.idatepicker-dialog-date{
+    display: flex;
+    align-content: space-between;
+    justify-content: space-between;
+    flex-direction: column;
+    font-size: 12px;
+    font-weight: 400;
+    padding: 0px 8px;
+    transition: all 450ms cubic-bezier(0.23, 1, 0.32, 1) 0ms;
+}
+
+.idatepicker-dialog-date-select{
+    display: flex;
+    justify-content: space-between;
+    background-color: inherit;
+    height: 48px;
+}
+
+.idatepicker-dialog-date-select > button:nth-child(2){
+    border: 10px;
+    box-sizing: border-box;
+    display: inline-block;
+    font-family: Roboto, sans-serif;
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0); cursor: pointer;
+    text-decoration: none;
+    margin: 0px;
+    outline: none;
+    font-size: 0px;
+    font-weight: inherit;
+    transform: translate(0px, 0px);
+    position: relative;
+    overflow: visible;
+    transition: all 450ms cubic-bezier(0.23, 1, 0.32, 1) 0ms;
+    width: 48px;
+    height: 48px;
+    background: none;
+}
+
+.idatepicker-dialog-date-select > button:nth-child(2) > div > svg{
+    display: inline-block;
+    color: rgba(0, 0, 0, 0.870588);
+    fill: currentcolor;
+    height: 24px;
+    width: 24px;
+    transition: all 450ms cubic-bezier(0.23, 1, 0.32, 1) 0ms;
+    user-select: none;
+}
+
+.idatepicker-dialog-date-select > button:last-child{
+    border: 10px;
+    box-sizing: border-box;
+    display: inline-block;
+    font-family: Roboto, sans-serif;
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+    cursor: pointer;
+    text-decoration: none;
+    margin: 0px;
+    outline: none;
+    font-size: 0px;
+    font-weight: inherit;
+    transform: translate(0px, 0px);
+    position: relative;
+    overflow: visible;
+    transition: all 450ms cubic-bezier(0.23, 1, 0.32, 1) 0ms;
+    width: 48px;
+    height: 48px;
+    background: none;
+}
+
+.idatepicker-dialog-date-select > button:last-child > div > svg{
+    display: inline-block;
+    color: rgba(0, 0, 0, 0.870588);
+    fill: currentcolor;
+    height: 24px;
+    width: 24px;
+    transition: all 450ms cubic-bezier(0.23, 1, 0.32, 1) 0ms;
+    user-select: none;
+}
+
+.idatepicker-dialog-date-select > div{
+    position: relative;
+    overflow: hidden;
+    height: 100%;
+    font-size: 14px;
+    font-weight: 500;
+    text-align: left;
+    width: 100%;
+}
+
+.idatepicker-dialog-date-select > div > div {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    top: 0px;
+    left: 0px;
+    transition: transform 450ms cubic-bezier(0.23, 1, 0.32, 1) 0ms, opacity 450ms cubic-bezier(0.23, 1, 0.32, 1) 0ms;
+}
+
+.idatepicker-dialog-date-select > div > div > div{
+    height: inherit;
+    padding-top: 12px;
+}
+
+.idatepicker-dialog-date-select > div > div > div > span{
+    cursor: pointer;
+}
+
+.idatepicker-dialog-date-select > div > div > div > span::after{
+    content: "";
+    position: absolute;
+    width: 24px;
+    height: 24px;
+    color: rgba(0, 0, 0, 0.870588);
+    fill: currentcolor;
+    transition: all 450ms cubic-bezier(0.23, 1, 0.32, 1) 0ms;
+    user-select: none;
+    background: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='24' height='24' stroke='none'> <path d='M16.59 8.59L12 13.17 7.41 8.59 6 10l6 6 6-6z'></path></svg>");
+}
+
+.idatepicker-dialog-action{
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    margin: 0px;
+    max-height: 48px;
+    padding: 0px;
+}
+
+.idatepicker-dialog-action button{
+    border: 10px;
+    box-sizing: border-box;
+    display: inline-block;
+    font-family: Roboto, sans-serif;
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+    cursor: pointer;
+    text-decoration: none;
+    margin: 4px 8px 8px 0px;
+    padding: 0px;
+    outline: none;
+    font-size: inherit;
+    font-weight: inherit;
+    transform: translate(0px, 0px);
+    height: 36px;
+    line-height: 36px;
+    min-width: 64px;
+    color: rgb(7,105,173);
+    transition: all 450ms cubic-bezier(0.23, 1, 0.32, 1) 0ms;
+    border-radius: 2px; position: relative;
+    overflow: hidden;
+    background-color: rgba(0, 0, 0, 0);
+    text-align: center;
+    max-height: 36px;
+    user-select: none;
+}
+
+.idatepicker-dialog-action button > div > span{
+    position: relative;
+    padding-left: 16px;
+    padding-right: 16px;
+    vertical-align: middle;
+    letter-spacing: 0px;
+    text-transform: uppercase;
+    font-weight: 500;
+    font-size: 14px;
+}

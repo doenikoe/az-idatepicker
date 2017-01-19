@@ -1,0 +1,89 @@
+<div class="idatepicker-wrapper">
+    <div class="inner-wrapper" [ngClass]="['inner-wrapper', isRequired ? 'required': '']">
+        <span>{{isRequired ? '*':''}}</span>
+    </div>
+    <input type="text"
+           name="{{name?name:'az-idatepicker'}}"
+           placeholder="{{placeholder}}"
+           value={{dateOutput}}
+           id="{{id !== '' ? id : 'az-idatepicker'}}"
+           class="input"
+           (focus)="focus(true)"
+           [(ngModel)]="idatePickerBinding"
+    />
+    <div>
+        <hr>
+        <!--<hr>-->
+        <div [ngClass]="['idatepicker-dialog-wrapper', viewCalendar ? 'active' : '']">
+            <div class="idatepicker-dialog-wrapper-inner">
+                <div class="idatepicker-dialog-wrapper-container">
+                    <div class="idatepicker-dialog-wrapper-container-left">
+                        <div>
+                            <div>
+                                <div style="cursor: pointer;">{{selectedYear}}</div>
+                            </div>
+                        </div>
+                        <div>
+                            <div>
+                                <div style="cursor: default; width: 100%; display: block;">{{selectedDayStr}}, {{selectedMonthStr}} {{selectedDay}}</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="idatepicker-dialog-wrapper-container-right">
+                        <div class="idatepicker-dialog-date">
+                            <div class="idatepicker-dialog-date-select">
+                                <div>
+                                    <div>
+                                        <div>
+                                            <span (click)="viewOptions()"><a>{{monthCalendarStr}} {{yearCalendar}}</a></span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <button *ngIf="changeViewOptions === false" tabindex="0" type="button" (click)="changeCalendar('prev')">
+                                    <div>
+                                        <svg>
+                                            <path d="M15.41 7.41L14 6l-6 6 6 6 1.41-1.41L10.83 12z"></path>
+                                        </svg>
+                                    </div>
+                                </button>
+                                <button *ngIf="changeViewOptions === false" tabindex="0" type="button" (click)="changeCalendar('next')">
+                                    <div>
+                                        <svg>
+                                            <path d="M10 6L8.59 7.41 13.17 12l-4.58 4.59L10 18l6-6z"></path>
+                                        </svg>
+                                    </div>
+                                </button>
+                            </div>
+                            <az-idatepicker-dates
+                                *ngIf="changeViewOptions === false"
+                                [customSymbol]="customSymbol"
+                                [weeks]="weeks"
+                                [dates]="dates"
+                                [selectedDate]="selectedDate"
+                                (setSelectedDate)="selectDate($event)">
+                            </az-idatepicker-dates>
+                            <az-idatepicker-years
+                                [locale]="locale"
+                                [yearCalendar]="yearCalendar"
+                                (showCalendar)="viewBack($event)"
+                                *ngIf="changeViewOptions === true">
+                            </az-idatepicker-years>
+                        </div>
+                        <div class="idatepicker-dialog-action" *ngIf="changeViewOptions === false">
+                            <button tabindex="0" type="button" (click)="cancel()">
+                                <div>
+                                    <span>Cancel</span>
+                                </div>
+                            </button>
+                            <button tabindex="0" type="button" (click)="ok()">
+                                <div>
+                                    <span>OK</span>
+                                </div>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

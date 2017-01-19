@@ -1,0 +1,17 @@
+<div class="idatepicker-dialog-years">
+    <div>
+        <div>
+            <div *ngFor="let y of numberOfyears">
+                <div (click)="showMonths(minYear+y)">
+                    <div #yearCalendarInit *ngIf="(minYear+y).toString() == yearCalendar"></div>
+                    <button tabindex="0" type="button"><span style="">{{minYear+y}}</span></button>
+                </div>
+                <div [class.show]="(minYear+y == yearCalendar)">
+                    <div *ngFor="let m of months">
+                        <div (click)="backToCalendar(minYear+y, m.key)">{{m.val}}</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
