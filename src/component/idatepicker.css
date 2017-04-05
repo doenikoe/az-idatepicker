@@ -1,7 +1,6 @@
 .idatepicker-wrapper{
     font-size: 16px;
     line-height: 24px;
-    width: 256px;
     height: 48px;
     display: inline-block;
     position: relative;
@@ -20,15 +19,6 @@
     color: rgba(0, 0, 0, 0.298039);
     transition: all 450ms cubic-bezier(0.23, 1, 0.32, 1) 0ms;
     bottom: 12px;
-}
-
-.idatepicker-wrapper .inner-wrapper.required{
-    text-align: right;
-    color: rgb(255,0,0);
-}
-
-.idatepicker-wrapper .inner-wrapper.required > span{
-    margin-left: 25px;
 }
 
 .idatepicker-wrapper .input{
