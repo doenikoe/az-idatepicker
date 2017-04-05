@@ -27,7 +27,6 @@ export class IDatePickerComponent implements OnInit{
     @Input() customSymbol: string;
     @Input() locale: string = 'en-ca';
     @Input() format:string;
-    @Input() isRequired: boolean = false;
     @Input() id: string;
     @Input() name: string;
     @Input() idatePickerBinding:any;
