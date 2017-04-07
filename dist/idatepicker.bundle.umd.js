@@ -131,6 +131,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	        this.changeViewOptions = false;
 	        this.viewCalendar = false;
 	        this.locale = 'en-ca';
+	        this.onSelect = new core_1.EventEmitter();
 	    }
 	    IDatePickerComponent.prototype.ngOnInit = function () {
 	        if (this.idatePickerBinding !== '') {
@@ -285,6 +286,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	    };
 	    IDatePickerComponent.prototype.ok = function () {
 	        this.viewCalendar = false;
+	        this.onSelect.emit(this.dateOutput);
 	    };
 	    return IDatePickerComponent;
 	}());
@@ -316,6 +318,10 @@ return /******/ (function(modules) { // webpackBootstrap
 	    core_1.Input(),
 	    __metadata("design:type", Object)
 	], IDatePickerComponent.prototype, "idatePickerBinding", void 0);
+	__decorate([
+	    core_1.Output(),
+	    __metadata("design:type", core_1.EventEmitter)
+	], IDatePickerComponent.prototype, "onSelect", void 0);
 	IDatePickerComponent = __decorate([
 	    core_1.Component({
 	        selector: 'az-idatepicker',
