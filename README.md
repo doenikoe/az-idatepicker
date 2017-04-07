@@ -29,20 +29,22 @@ import {IDatePickerModule} from 'az-idatepicker';
     bootstrap: [...]
 })
 ```
-Call <az-idatepicker> from you template:
+Call <az-idatepicker> from your template:
 ```angular2html
     <az-idatepicker
-      id="myDateId"
-      name="myDateName"
-      placeholder="az-idatepicker"
-      customSymbol="S-S-R-K-J-S-M"
-      locale="id"
-      format="YYYY-MM-DD"
-      idatePickerBinding="yourBinding"
-    ></az-idatepicker>
+        id="myInput"
+        [name]="'myInputName'"
+        [placeholder]="'Testing'"
+        [customSymbol]="'S-S-R-K-J-S-M'"
+        [locale]="'id'"
+        [format]="'YYYY-MM-DD'"
+        [idatePickerBinding]="model.date"
+        (onSelect)="setDate($event)"
+    ></az-idatepicker>    
 ```
 
 # API
+## Attributes
 | Parameter          	| Type    	| Description                                                                                         	|
 |-----------------------|-----------|-------------------------------------------------------------------------------------------------------|
 | id                 	| string  	| ID of component                                                                                     	|
@@ -51,7 +53,12 @@ Call <az-idatepicker> from you template:
 | customSymbol       	| string  	| List of custom day symbol at the header, it started from monday and each symbol separated by 'dash' 	|
 | locale             	| string   	| Use momentjs (http://momentjs.com/) locale files                                                    	|
 | format             	| string  	| The date format, default to 'YYYY-MM-DD'                                                            	|
-| idatePickerBinding 	| any     	| Binding for ngModel                                                                                 	|
+| idatePickerBinding 	| object   	| Binding for ngModel                                                                                 	|
+  
+## Events
+| Name                  | Return Type  | Description                                                                                        |
+|-----------------------|--------------|----------------------------------------------------------------------------------------------------|
+| onSelect              | string       | Return selected date. This event triggered after you select a date and click the <b>ok</b> button
 
 # TODO
 - Improve UI and documentation
