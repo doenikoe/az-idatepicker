@@ -14,7 +14,7 @@
         <hr>
         <!--<hr>-->
         <div [ngClass]="['idatepicker-dialog-wrapper', viewCalendar ? 'active' : '']">
-            <div class="idatepicker-dialog-wrapper-inner">
+            <div class="idatepicker-dialog-wrapper-inner" *ngIf="viewCalendar">
                 <div class="idatepicker-dialog-wrapper-container">
                     <div class="idatepicker-dialog-wrapper-container-left">
                         <div>
