@@ -1,4 +1,4 @@
-import {Component, Input, OnInit} from '@angular/core';
+import {Component, Input, OnInit, Output, EventEmitter} from '@angular/core';
 import * as moment from 'moment';
 
 @Component({
@@ -30,6 +30,8 @@ export class IDatePickerComponent implements OnInit{
     @Input() id: string;
     @Input() name: string;
     @Input() idatePickerBinding:any;
+
+    @Output() onSelect: EventEmitter<string> = new EventEmitter();
 
     constructor(){
     }
@@ -207,5 +209,6 @@ export class IDatePickerComponent implements OnInit{
 
     ok():void{
         this.viewCalendar = false;
+        this.onSelect.emit(this.dateOutput);
     }
 }
