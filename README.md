@@ -1,7 +1,7 @@
 ![alt tag](https://github.com/doenikoe/az-idatepicker/raw/master/screenshot.png)
 
 # az-idatepicker
-Datepicker component for angular 2
+Datepicker component for angular 2. See it in action here: [https://plnkr.co/edit/gJu3kNJL3rnURc4e3Vml?p=preview](https://plnkr.co/edit/gJu3kNJL3rnURc4e3Vml?p=preview) 
 
 # Installation
 This components require moment.js:
