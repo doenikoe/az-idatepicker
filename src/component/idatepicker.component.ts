@@ -4,7 +4,7 @@ import * as moment from 'moment';
 @Component({
     selector: 'az-idatepicker',
     templateUrl: './idatepicker.component.html',
-    styleUrls: ['idatepicker.css']
+    styleUrls: ['idatepicker.sass', 'idatepicker.css']
 })
 
 export class IDatePickerComponent implements OnInit{
@@ -38,7 +38,7 @@ export class IDatePickerComponent implements OnInit{
 
     ngOnInit(){
         if(this.idatePickerBinding !== '') {
-            this.selectDate(this.idatePickerBinding);
+            this.selectDate(this.idatePickerBinding, false);
         }
         this.formatDateStr();
         this.setCalendarProps();
@@ -155,12 +155,20 @@ export class IDatePickerComponent implements OnInit{
         return results;
     }
 
-    selectDate(event: string): void{
+    selectDate(event: string, closeAfterSelect: boolean = true): void{
         this.selectedDate = moment(event).format('YYYY-MM-DD');
         this.formatDateStr();
         this.dateOutput = moment(this.selectedDate)
             .locale(this.locale)
-            .format(this.format)
+            .format(this.format);
+
+        if(closeAfterSelect){
+            //Close calendar
+            this.viewCalendar = false;
+
+            //Emit selection event
+            this.onSelect.emit(this.dateOutput);
+        }
     }
 
     changeCalendar(direction: string): void{
@@ -192,7 +200,7 @@ export class IDatePickerComponent implements OnInit{
     }
 
     viewBack(event: string):void{
-        this.selectDate(event);
+        this.selectDate(event, false);
         this.setCalendarProps();
         this.renderCalendar();
         this.viewOptions();
