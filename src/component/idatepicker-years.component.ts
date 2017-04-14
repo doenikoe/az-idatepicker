@@ -9,19 +9,21 @@ import locale = moment.locale;
 })
 
 export class IDatePickerYearsComponent implements OnInit, AfterViewInit{
-    minYear: number = 1970;
-    maxYear: number = 2020;
     months: Array<Object>;
 
     @Input() locale: string;
     @Input() yearCalendar: string;
+    @Input() minYear: number;
+    @Input() maxYear: number;
     @Output() showCalendar: EventEmitter<string> = new EventEmitter();
 
     @ViewChild('yearCalendarInit') yc:ElementRef;
 
-    numberOfyears: Array<number> = Array((this.maxYear - this.minYear)+1).fill(0).map((e,i)=> i);
+    numberOfyears: Array<number>;
 
     ngOnInit(){
+        this.numberOfyears = Array((this.maxYear - this.minYear)+1).fill(0).map((e,i)=> i);
+
         this.months = Array(12).fill(0).map((e,i)=>{
             return {
                 val:moment().locale(this.locale).month(i).format('MMM'),

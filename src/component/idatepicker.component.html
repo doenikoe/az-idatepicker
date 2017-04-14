@@ -65,6 +65,8 @@
                             <az-idatepicker-years
                                 [locale]="locale"
                                 [yearCalendar]="yearCalendar"
+                                [minYear]="minYear"
+                                [maxYear]="maxYear"
                                 (showCalendar)="viewBack($event)"
                                 *ngIf="changeViewOptions === true">
                             </az-idatepicker-years>

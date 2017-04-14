@@ -35,7 +35,7 @@ Call <az-idatepicker> from your template:
         id="myInput"
         [name]="'myInputName'"
         [placeholder]="'Testing'"
-        [customSymbol]="'S-S-R-K-J-S-M'"
+        [dayLabels]="'S-S-R-K-J-S-M'"
         [locale]="'id'"
         [format]="'YYYY-MM-DD'"
         [idatePickerBinding]="model.date"
@@ -45,15 +45,18 @@ Call <az-idatepicker> from your template:
 
 # API
 ## Attributes
-| Parameter          	| Type    	| Description                                                                                         	|
-|-----------------------|-----------|-------------------------------------------------------------------------------------------------------|
-| id                 	| string  	| ID of component                                                                                     	|
-| name               	| string  	| Name of component                                                                                   	|
-| placeholder        	| string  	| Text to shown if the datepicker is empty                                                            	|
-| dayLabels       	    | string  	| Day labels visible at header, it started from monday and each symbol separated by 'dash' 	            |
-| locale             	| string   	| Use momentjs (http://momentjs.com/) locale files                                                    	|
-| format             	| string  	| The date format, default to 'YYYY-MM-DD'                                                            	|
-| idatePickerBinding 	| object   	| Binding for ngModel                                                                                 	|
+| Parameter          	| Type    | Is Required | Default Value | Description                                                                               |
+|-----------------------|---------|-------------------------------------------------------------------------------------------------------------------------|
+| id                 	| string  | no          |      -        | ID of component                                                                           |
+| name               	| string  | no          |      -        | Name of component                                                                         |
+| placeholder        	| string  | no          |      -        | Text to shown if the datepicker is empty                                                  |
+| dayLabels       	    | string  | yes         |      -        | Day labels visible at header, it started from monday and each symbol separated by 'dash'  |
+| locale             	| string  | no          |    en-ca      | Use momentjs (http://momentjs.com/) locale files                                          |
+| format             	| string  | no          |  YYYY-MM-DD   | The date format, default to 'YYYY-MM-DD'                                                  |
+| idatePickerBinding 	| any     | no          |      -        | Binding for ngModel                                                                       |
+| sundayHighlight       | boolean | no          |    false      | If true then `sunday` will have red color                                                 |
+| minYear               | number  | no          |     1970      | Minimum year                                                                              |
+| maxYear               | number  | no          |     2020      | Maximum year                                                                              |
   
 ## Events
 | Name                  | Return Type  | Description                                                                                        |

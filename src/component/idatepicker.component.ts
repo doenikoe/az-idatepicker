@@ -23,21 +23,27 @@ export class IDatePickerComponent implements OnInit{
     weeks: Array<number>;
     viewCalendar: boolean = false;
 
-    @Input() placeholder: string;
+    @Input() placeholder: string = '';
     @Input() dayLabels: string;
     @Input() locale: string = 'en-ca';
-    @Input() format:string;
-    @Input() id: string;
-    @Input() name: string;
-    @Input() idatePickerBinding:any;
+    @Input() format:string = 'YYYY-MM-DD';
+    @Input() id: string = '';
+    @Input() name: string = '';
+    @Input() idatePickerBinding:any = '';
     @Input() sundayHighlight: boolean = false;
+    @Input() minYear: number = 1970;
+    @Input() maxYear: number = 2020;
 
     @Output() onSelect: EventEmitter<string> = new EventEmitter();
 
     constructor(){
+
     }
 
     ngOnInit(){
+        if(this.maxYear < this.minYear)
+            throw new Error('Invalid attribute value: maxYear must be greater than or equal to minYear');
+
         if(this.idatePickerBinding !== '') {
             this.selectDate(this.idatePickerBinding, false);
         }
