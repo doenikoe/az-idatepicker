@@ -3,7 +3,7 @@ import {Component, OnInit, Input, Output, EventEmitter} from '@angular/core';
 @Component({
     selector: 'az-idatepicker-dates',
     templateUrl: './idatepicker-dates.component.html',
-    styleUrls: ['idatepicker-dates.css']
+    styleUrls: ['idatepicker-dates.sass']
 })
 
 export class IDatePickerDatesComponent implements OnInit{
