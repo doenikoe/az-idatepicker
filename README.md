@@ -50,7 +50,7 @@ Call <az-idatepicker> from your template:
 | id                 	| string  	| ID of component                                                                                     	|
 | name               	| string  	| Name of component                                                                                   	|
 | placeholder        	| string  	| Text to shown if the datepicker is empty                                                            	|
-| customSymbol       	| string  	| List of custom day symbol at the header, it started from monday and each symbol separated by 'dash' 	|
+| dayLabels       	    | string  	| Day labels visible at header, it started from monday and each symbol separated by 'dash' 	            |
 | locale             	| string   	| Use momentjs (http://momentjs.com/) locale files                                                    	|
 | format             	| string  	| The date format, default to 'YYYY-MM-DD'                                                            	|
 | idatePickerBinding 	| object   	| Binding for ngModel                                                                                 	|

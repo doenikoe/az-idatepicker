@@ -24,7 +24,7 @@ export class IDatePickerComponent implements OnInit{
     viewCalendar: boolean = false;
 
     @Input() placeholder: string;
-    @Input() customSymbol: string;
+    @Input() dayLabels: string;
     @Input() locale: string = 'en-ca';
     @Input() format:string;
     @Input() id: string;
@@ -213,6 +213,7 @@ export class IDatePickerComponent implements OnInit{
     cancel():void{
         this.viewCalendar = false;
         this.dateOutput = null;
+        this.changeViewOptions = false;
     }
 
     ok():void{

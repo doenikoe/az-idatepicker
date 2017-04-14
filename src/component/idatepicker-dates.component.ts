@@ -9,7 +9,7 @@ import {Component, OnInit, Input, Output, EventEmitter} from '@angular/core';
 export class IDatePickerDatesComponent implements OnInit{
     dateSymbol: Array<string>;
 
-    @Input() customSymbol: string;
+    @Input() dayLabels: string;
     @Input() weeks: Array<number>;
     @Input() dates: Array<Object>;
     @Input() selectedDate: string;
@@ -20,10 +20,10 @@ export class IDatePickerDatesComponent implements OnInit{
     }
 
     parseWeekDays(): Array<string>{
-        if(!this.customSymbol){
+        if(!this.dayLabels){
             return ['M', 'T', 'W', 'T', 'F', 'S', 'S']
         }
-        return this.customSymbol.split('-');
+        return this.dayLabels.split('-');
     }
 
     getIsSelected(date: string):boolean{
