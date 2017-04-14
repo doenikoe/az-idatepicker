@@ -46,7 +46,7 @@ Call <az-idatepicker> from your template:
 # API
 ## Attributes
 | Parameter          	| Type    | Is Required | Default Value | Description                                                                               |
-|-----------------------|---------|-------------------------------------------------------------------------------------------------------------------------|
+|-----------------------|---------|-------------|---------------|-------------------------------------------------------------------------------------------|
 | id                 	| string  | no          |      -        | ID of component                                                                           |
 | name               	| string  | no          |      -        | Name of component                                                                         |
 | placeholder        	| string  | no          |      -        | Text to shown if the datepicker is empty                                                  |
