@@ -4,7 +4,7 @@ import * as moment from 'moment';
 @Component({
     selector: 'az-idatepicker',
     templateUrl: './idatepicker.component.html',
-    styleUrls: ['idatepicker.sass', 'idatepicker.css']
+    styleUrls: ['idatepicker.sass']
 })
 
 export class IDatePickerComponent implements OnInit{

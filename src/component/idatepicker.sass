@@ -31,7 +31,7 @@
     border: none 
     outline: none 
     background-color: rgba(0, 0, 0, 0) 
-    color: rgba(0, 0, 0, 0.870588) 
+    color: $black 
     font-size: inherit
     font-family: inherit
     -webkit-tap-highlight-color: rgba(0, 0, 0, 0)
@@ -65,7 +65,7 @@
     @include transition(all 450ms $ease-in-out-expo)
 
 .idatepicker-dialog-wrapper-inner
-  color: rgba(0, 0, 0, 0.870588)
+  color: $black
   background-color: rgb(255, 255, 255)
   transition: transform 450ms cubic-bezier(0.23, 1, 0.32, 1) 0ms, opacity 450ms cubic-bezier(0.23, 1, 0.32, 1) 0ms
   box-sizing: border-box
@@ -83,7 +83,7 @@
   min-height: 330px
   min-width: 479px
   .idatepicker-dialog-wrapper-container
-    color: rgba(0, 0, 0, 0.870588)
+    color: $black
     user-select: none
     width: 479px
     .idatepicker-dialog-wrapper-container-left
@@ -122,3 +122,102 @@
     .idatepicker-dialog-wrapper-container-right
       display: flex
       flex-direction: column
+      .idatepicker-dialog-date
+        display: flex
+        align-content: space-between
+        justify-content: space-between
+        flex-direction: column
+        font-size: 12px
+        font-weight: 400
+        padding: 0 8px
+        .idatepicker-dialog-date-select
+          display: flex
+          justify-content: space-between
+          background-color: inherit
+          height: 48px
+          > button
+            background: none
+            border: 10px
+            box-sizing: border-box
+            display: inline-block
+            -webkit-tap-highlight-color: rgba(0, 0, 0, 0)
+            cursor: pointer
+            text-decoration: none
+            margin: 0
+            outline: none
+            font-size: 0
+            font-weight: inherit
+            transform: translate(0px, 0px)
+            position: relative
+            overflow: visible
+            @include size(48px 48px)
+            > div > svg
+              display: inline-block
+              color: $black
+              fill: currentcolor
+              @include size(24px 24px)
+              user-select: none
+          > div
+            position: relative
+            overflow: hidden
+            @include size(100% 100%)
+            font-size: 14px
+            font-weight: 500
+            text-align: left
+            > div
+              @include position(absolute, 0 null null 0)
+              @include size(100% 100%)
+              transition: transform 450ms cubic-bezier(0.23, 1, 0.32, 1) 0ms, opacity 450ms cubic-bezier(0.23, 1, 0.32, 1) 0ms
+              > div
+                height: inherit
+                padding-top: 12px
+                > span
+                  cursor: pointer
+                  &::after
+                    @include size(24px 24px)
+                    content: ""
+                    position: absolute
+                    color: $black
+                    fill: currentcolor
+                    user-select: none
+                    background: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='24' height='24' stroke='none'> <path d='M16.59 8.59L12 13.17 7.41 8.59 6 10l6 6 6-6z'></path></svg>")
+      .idatepicker-dialog-action
+        display: flex
+        flex-direction: row
+        justify-content: flex-end
+        margin: 0
+        max-height: 48px
+        padding: 0
+        button
+          border: 10px
+          box-sizing: border-box
+          display: inline-block
+          -webkit-tap-highlight-color: rgba(0, 0, 0, 0)
+          cursor: pointer
+          text-decoration: none
+          @include margin(4px 8px 8px 0)
+          padding: 0
+          outline: none
+          transform: translate(0px, 0px)
+          height: 36px
+          line-height: 36px
+          min-width: 64px
+          border-color: $blueaz
+          color: $white
+          transition: all 450ms cubic-bezier(0.23, 1, 0.32, 1) 0ms
+          border-radius: 2px
+          position: relative
+          overflow: hidden
+          background: linear-gradient(to bottom, #0077c8, #006eba)
+          text-align: center
+          max-height: 36px
+          user-select: none
+          > div > span
+            position: relative
+            padding-left: 16px
+            padding-right: 16px
+            vertical-align: middle
+            letter-spacing: 0
+            text-transform: uppercase
+            font-weight: 500
+            font-size: 14px
