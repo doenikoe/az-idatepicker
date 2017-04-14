@@ -1,6 +1,6 @@
 {
   "name": "az-idatepicker",
-  "version": "0.0.9",
+  "version": "0.0.10",
   "description": "Datepicker component for angular 2",
   "main": "dist/idatepicker.bundle.umd.js",
   "scripts": {
