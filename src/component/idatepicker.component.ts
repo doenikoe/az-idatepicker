@@ -30,6 +30,7 @@ export class IDatePickerComponent implements OnInit{
     @Input() id: string;
     @Input() name: string;
     @Input() idatePickerBinding:any;
+    @Input() sundayHighlight: boolean = false;
 
     @Output() onSelect: EventEmitter<string> = new EventEmitter();
 

@@ -5,6 +5,7 @@
 
 ### Added
 - bourbon (http://bourbon.io) for development
+- add attribute sundayHighlight
 
 ### Fixed
 - reset view to calendar after click cancel on select year option

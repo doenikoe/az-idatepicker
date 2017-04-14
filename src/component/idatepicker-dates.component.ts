@@ -13,6 +13,7 @@ export class IDatePickerDatesComponent implements OnInit{
     @Input() weeks: Array<number>;
     @Input() dates: Array<Object>;
     @Input() selectedDate: string;
+    @Input() sundayHighlight: boolean;
     @Output() setSelectedDate: EventEmitter<string> = new EventEmitter();
 
     ngOnInit(){

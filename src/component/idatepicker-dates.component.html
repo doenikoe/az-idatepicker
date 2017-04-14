@@ -93,7 +93,7 @@
                         [class.selected-day]="getIsSelected(dates[w][6][0].meta)"
                 >
                     <div></div>
-                    <span>{{dates[w][6][0].date}}</span>
+                    <span [ngClass]="{'sunday': sundayHighlight}">{{dates[w][6][0].date}}</span>
                 </button>
             </div>
         </div>
