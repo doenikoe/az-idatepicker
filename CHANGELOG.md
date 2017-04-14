@@ -1,4 +1,4 @@
-## [Unreleased]
+## [14 April 2017]
 ### Changed
 - from now on css will be replaced by sass (for development)
 - rename attribute customSymbol to dayLabels
