@@ -5,7 +5,7 @@ import locale = moment.locale;
 @Component({
    selector: 'az-idatepicker-years',
     templateUrl: './idatepicker-years.component.html',
-    styleUrls: ['idatepicker-years.css']
+    styleUrls: ['idatepicker-years.sass']
 })
 
 export class IDatePickerYearsComponent implements OnInit, AfterViewInit{
