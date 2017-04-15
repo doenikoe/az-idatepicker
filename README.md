@@ -91,7 +91,7 @@ Example:
 If you found any bugs please do not hesitate to give us feedback by reporting issue in our github repository
 
 ## Star
-Help us to improve the library :point_right: give us star :star: 
+:point_right: Support us by give a star :star: 
 
 ## License
 - License: MIT
