@@ -31,16 +31,16 @@ import {IDatePickerModule} from 'az-idatepicker';
 ```
 Call <az-idatepicker> from your template:
 ```angular2html
-    <az-idatepicker
-        id="myInput"
-        [name]="'myInputName'"
-        [placeholder]="'Testing'"
-        [dayLabels]="'S-S-R-K-J-S-M'"
-        [locale]="'id'"
-        [format]="'YYYY-MM-DD'"
-        [idatePickerBinding]="model.date"
-        (onSelect)="setDate($event)"
-    ></az-idatepicker>    
+<az-idatepicker
+    id="myInput"
+    [name]="'myInputName'"
+    [placeholder]="'Testing'"
+    [dayLabels]="'S-S-R-K-J-S-M'"
+    [locale]="'id'"
+    [format]="'YYYY-MM-DD'"
+    [idatePickerBinding]="model.date"
+    (onSelect)="setDate($event)"
+></az-idatepicker>    
 ```
 
 # API
@@ -68,18 +68,18 @@ Call <az-idatepicker> from your template:
 You can use [template reference variable](https://angular.io/docs/ts/latest/guide/template-syntax.html#!#ref-vars) to call exposed methods in az-idatepicker component
 Example:
 ```angular2html
-    <button (onclick)="elem.openDatePicker()">Open IDatePicker</button>
-    
-    <az-idatepicker #elem
-        id="myInput"
-        [name]="'myInputName'"
-        [placeholder]="'Testing'"
-        [dayLabels]="'S-S-R-K-J-S-M'"
-        [locale]="'id'"
-        [format]="'YYYY-MM-DD'"
-        [idatePickerBinding]="model.date"
-        (onSelect)="setDate($event)"
-    ></az-idatepicker>
+<button (onclick)="elem.openDatePicker()">Open IDatePicker</button>
+
+<az-idatepicker #elem
+    id="myInput"
+    [name]="'myInputName'"
+    [placeholder]="'Testing'"
+    [dayLabels]="'S-S-R-K-J-S-M'"
+    [locale]="'id'"
+    [format]="'YYYY-MM-DD'"
+    [idatePickerBinding]="model.date"
+    (onSelect)="setDate($event)"
+></az-idatepicker>
 ```
 
 | Name                  | Args  | Description           |
