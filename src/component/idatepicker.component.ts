@@ -24,7 +24,7 @@ export class IDatePickerComponent implements OnInit{
     viewCalendar: boolean = false;
 
     @Input() placeholder: string = '';
-    @Input() dayLabels: string;
+    @Input() dayLabels: Array<string>;
     @Input() locale: string = 'en-ca';
     @Input() format:string = 'YYYY-MM-DD';
     @Input() id: string = '';
@@ -33,12 +33,12 @@ export class IDatePickerComponent implements OnInit{
     @Input() sundayHighlight: boolean = false;
     @Input() minYear: number = 1970;
     @Input() maxYear: number = 2020;
+    @Input() disabled: boolean = false;
+    @Input() disableDays: Array<number> = [];
 
-    @Output() onSelect: EventEmitter<string> = new EventEmitter();
+    @Output() getSelectedDate: EventEmitter<string> = new EventEmitter();
 
-    constructor(){
-
-    }
+    constructor(){}
 
     ngOnInit(){
         if(this.maxYear < this.minYear)
@@ -52,7 +52,7 @@ export class IDatePickerComponent implements OnInit{
         this.renderCalendar();
     }
 
-    setCalendarProps():void{
+    private setCalendarProps():void{
         this.monthCalendar = parseInt(this.selectedMonth);
         this.yearCalendar = this.selectedYear;
     }
@@ -174,7 +174,7 @@ export class IDatePickerComponent implements OnInit{
             this.viewCalendar = false;
 
             //Emit selection event
-            this.onSelect.emit(this.dateOutput);
+            this.getSelectedDate.emit(this.dateOutput);
         }
     }
 
@@ -213,11 +213,11 @@ export class IDatePickerComponent implements OnInit{
         this.viewOptions();
     }
 
-    focus():void{
+    openDatePicker():void{
         this.viewCalendar = true;
     }
 
-    cancel():void{
+    closeDatePicker():void{
         this.viewCalendar = false;
         this.dateOutput = null;
         this.changeViewOptions = false;
@@ -225,6 +225,6 @@ export class IDatePickerComponent implements OnInit{
 
     ok():void{
         this.viewCalendar = false;
-        this.onSelect.emit(this.dateOutput);
+        this.getSelectedDate.emit(this.dateOutput);
     }
 }

@@ -36,6 +36,9 @@
     font-family: inherit
     -webkit-tap-highlight-color: rgba(0, 0, 0, 0)
     -webkit-appearance: textfield
+    &.disabled
+      color: rgb(180, 180, 180)
+      cursor: no-drop
   div:last-child
     hr
       box-sizing: content-box
@@ -48,6 +51,8 @@
         border-top: none
         border-left: none
         border-right: none
+        &.disabled
+          border-bottom: 2px dotted rgba(0, 0, 0, 0.298039)
       &:last-child
         border-color: $bluesky
         border-top: none

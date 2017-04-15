@@ -5,12 +5,13 @@ import {Directive, ElementRef, HostListener, HostBinding} from '@angular/core';
 })
 export class DateHighlight{
     @HostBinding('class.hover') isHover:boolean = false;
-    constructor(private el: ElementRef){
 
-    }
+    constructor(private el: ElementRef){}
 
     @HostListener('mouseenter') onMouseEnter(){
-        this.isHover = true;
+        if(!this.el.nativeElement.classList.contains('disabled')) {
+            this.isHover = true;
+        }
     }
 
     @HostListener('mouseleave') onMouseLeave(){

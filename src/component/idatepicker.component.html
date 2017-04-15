@@ -1,18 +1,19 @@
 <div class="idatepicker-wrapper">
     <div class="inner-wrapper" [ngClass]="['inner-wrapper']">
     </div>
-    <input type="text"
-           name="{{name?name:'az-idatepicker'}}"
-           placeholder="{{placeholder}}"
-           value={{dateOutput}}
-           id="{{id !== '' ? id : 'az-idatepicfwraker'}}"
-           class="input"
-           (focus)="focus(true)"
-           [(ngModel)]="idatePickerBinding"
+    <input
+        type="text"
+        name="{{name?name:'az-idatepicker'}}"
+        placeholder="{{placeholder}}"
+        value={{dateOutput}}
+        id="{{id !== '' ? id : 'az-idatepicker'}}"
+        [ngClass]="{input: true, disabled: disabled}"
+        (focus)="openDatePicker(true)"
+        [disabled]="disabled"
+        [(ngModel)]="idatePickerBinding"
     />
     <div>
-        <hr>
-        <!--<hr>-->
+        <hr [ngClass]="{'disabled': disabled}">
         <div [ngClass]="['idatepicker-dialog-wrapper', viewCalendar ? 'active' : '']">
             <div class="idatepicker-dialog-wrapper-inner" *ngIf="viewCalendar">
                 <div class="idatepicker-dialog-wrapper-container">
@@ -60,7 +61,9 @@
                                 [dates]="dates"
                                 [selectedDate]="selectedDate"
                                 [sundayHighlight]="sundayHighlight"
-                                (setSelectedDate)="selectDate($event)">
+                                (setSelectedDate)="selectDate($event)"
+                                [disableDays]="disableDays"
+                            >
                             </az-idatepicker-dates>
                             <az-idatepicker-years
                                 [locale]="locale"
@@ -72,7 +75,7 @@
                             </az-idatepicker-years>
                         </div>
                         <div class="idatepicker-dialog-action">
-                            <button tabindex="0" type="button" (click)="cancel()">
+                            <button tabindex="0" type="button" (click)="closeDatePicker()">
                                 <div>
                                     <span>Close</span>
                                 </div>
