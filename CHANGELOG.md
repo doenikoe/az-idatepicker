@@ -1,4 +1,4 @@
-## [unreleased]
+## [15 April 2017]
 ### Changed
 - change dayLabels type from string to Array<string>
 - change onSelect event name to getSelectedDate
