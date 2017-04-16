@@ -57,7 +57,8 @@ Call <az-idatepicker> from your template:
 | sundayHighlight       | boolean        | no          |    false      | If true then `sunday` will have red color                                                                                                                  |
 | minYear               | number         | no          |     1970      | Minimum year                                                                                                                                               |
 | maxYear               | number         | no          |     2020      | Maximum year                                                                                                                                               |
-| disableDays           | Array<number>  | no           |     []       | Disable dates that in the defined day. Day must defined in ordered index (0=monday, 1=tuesday, 2=wednesday, 3=thursday, 4=friday, 5=saturday, 6: sunday)        |
+| disableDays           | Array<number>  | no          |     []        | Disable dates that in the defined day. Day must defined in ordered index (0=sunday, 1=monday, 2=tuesday, 3=wednesday, 4=thursday, 5=friday, 6=saturday)    |
+| minDate, maxDate      | moment         | no          |      -        | Restrict the range of selectable date with 'minDate' and 'maxDate'                                                                                         |
   
 ## Callback Events
 | Name                  | Return Type  | Description                                                                                        |

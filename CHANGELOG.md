@@ -1,3 +1,8 @@
+## [16 April 2017]
+### Added
+- add minDate attribute
+- add maxDate attribute
+
 ## [15 April 2017]
 ### Changed
 - change dayLabels type from string to Array<string>

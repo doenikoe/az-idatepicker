@@ -35,6 +35,8 @@ export class IDatePickerComponent implements OnInit{
     @Input() maxYear: number = 2020;
     @Input() disabled: boolean = false;
     @Input() disableDays: Array<number> = [];
+    @Input() minDate: any;
+    @Input() maxDate: any;
 
     @Output() getSelectedDate: EventEmitter<string> = new EventEmitter();
 
@@ -99,7 +101,14 @@ export class IDatePickerComponent implements OnInit{
             let date = (i + 1).toString();
             let dateStr = calendarIdentifier + '-' + (date.length == 1 ? '0' + date : date);
             let dayName = moment(dateStr).format('dddd');
-            return [{'day': dayName, 'date': i + 1, 'meta': dateStr}];
+            let dayOfWeek = parseInt(moment(dateStr).format('e'));
+            let arr = this.disableDays;
+            let disabled = (
+                moment(dateStr) < this.minDate ||
+                moment(dateStr) > this.maxDate ||
+                arr.includes(dayOfWeek)
+            );
+            return [{ 'day': dayName, 'date': i + 1, 'meta': dateStr, 'disabled': disabled }];
         });
 
         let firstDay = moment(calendarIdentifier + '-01').format('dddd');

@@ -14,7 +14,7 @@ export class IDatePickerDatesComponent implements OnInit{
     @Input() dates: Array<Object>;
     @Input() selectedDate: string;
     @Input() sundayHighlight: boolean;
-    @Input() disableDays: Array<number>;
+
     @Output() setSelectedDate: EventEmitter<string> = new EventEmitter();
 
     ngOnInit(){
@@ -34,10 +34,5 @@ export class IDatePickerDatesComponent implements OnInit{
 
     selectDate(date: string):void{
         this.setSelectedDate.emit(date);
-    }
-
-    isDayDisabled(dayIndex: number): boolean {
-        let arr = this.disableDays;
-        return arr.includes(dayIndex);
     }
 }

@@ -56,13 +56,12 @@
                             </div>
                             <az-idatepicker-dates
                                 *ngIf="changeViewOptions === false"
-                                [dayLabels]="dayLabels"
-                                [weeks]="weeks"
-                                [dates]="dates"
-                                [selectedDate]="selectedDate"
-                                [sundayHighlight]="sundayHighlight"
-                                (setSelectedDate)="selectDate($event)"
-                                [disableDays]="disableDays"
+                                [dayLabels] = "dayLabels"
+                                [weeks] = "weeks"
+                                [dates] = "dates"
+                                [selectedDate] = "selectedDate"
+                                [sundayHighlight] = "sundayHighlight"
+                                (setSelectedDate) = "selectDate($event)"
                             >
                             </az-idatepicker-dates>
                             <az-idatepicker-years
