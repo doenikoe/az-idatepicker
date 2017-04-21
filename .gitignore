@@ -48,7 +48,6 @@ src/main.ts
 src/polyfills.ts
 node_modules/
 docs
-index.js
 webpack.config.js
 config/
 dist_dev/
@@ -56,3 +55,4 @@ dist_dev/
 .idea/
 package.json
 src/bourbon
+index.d.ts
