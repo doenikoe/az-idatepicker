@@ -1,4 +1,5 @@
 [![NPM](https://nodei.co/npm/az-idatepicker.png?downloads=true&stars=true)](https://nodei.co/npm/az-idatepicker/)
+
 [![npm version](https://badge.fury.io/js/az-idatepicker.svg)](https://badge.fury.io/js/az-idatepicker) [![Known Vulnerabilities](https://snyk.io/test/npm/az-idatepicker/badge.svg)](https://snyk.io/test/npm/az-idatepicker) ![mit license](https://img.shields.io/packagist/l/doctrine/orm.svg) ![pull request is welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg?style=flat-square)
  
 ![screenshot](https://github.com/doenikoe/az-idatepicker/raw/master/screenshot.png)
