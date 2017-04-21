@@ -1,0 +1,11 @@
+node_modules/
+webpack.config.js
+.DS_Store
+.idea/
+dist_dev/app.bundle.js
+dist_dev/app.bundle.js.map
+dist_dev/index.html
+dist_dev/polyfills.bundle.js
+dist_dev/polyfills.bundle.js.map
+dist_dev/vendor.bundle.js
+dist_dev/vendor.bundle.js.map
