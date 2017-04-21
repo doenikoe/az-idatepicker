@@ -5,7 +5,7 @@
   "main": "dist/idatepicker.bundle.umd.js",
   "scripts": {
     "build": "rimraf dist && webpack --config webpack.config.js --progress --profile --bail",
-    "dev": "rimraf dist_dev && webpack --config config/webpack.prod.js --progress --profile --bail"
+    "dev": "rimraf dist_dev && webpack --config config/webpack.dev.js --progress --profile --bail"
   },
   "repository": {
     "type": "git",
