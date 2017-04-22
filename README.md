@@ -96,7 +96,7 @@ Example:
 If you found any bugs please do not hesitate to give us feedback by reporting issue in our github repository
 
 ## Care for pull request ?
-This [wiki](https://github.com/doenikoe/az-idatepicker/wiki/Building-and-testing-az-idatepicker) explain how to prepare your local development environment. Let's start contributing in az-idatepicker development.
+This [page](https://github.com/doenikoe/az-idatepicker/wiki/Building-and-testing-az-idatepicker) explain how to prepare your local development environment. Let's start contributing in az-idatepicker development.
 
 ## Star
 :point_right: Support us by give a star :star: 
