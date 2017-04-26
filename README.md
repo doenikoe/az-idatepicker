@@ -39,7 +39,7 @@ Call <az-idatepicker> from your template:
     id="myInput"
     [name]="'myInputName'"
     [placeholder]="'Testing'"
-    [dayLabels]="'S-S-R-K-J-S-M'"
+    [dayLabels]="['S','S','R','K','J','S','M']"
     [locale]="'id'"
     [format]="'YYYY-MM-DD'"
     [idatePickerBinding]="model.date"
